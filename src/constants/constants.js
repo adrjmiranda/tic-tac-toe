@@ -16,7 +16,7 @@ const actions = {
 };
 
 const initialMoves = [
-	{ pos: 1, symbol: undefined },
+	{ pos: 1, symbol: 'X' },
 	{ pos: 2, symbol: undefined },
 	{ pos: 3, symbol: undefined },
 	{ pos: 4, symbol: undefined },

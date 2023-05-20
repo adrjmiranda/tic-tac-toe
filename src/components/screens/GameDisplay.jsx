@@ -1,12 +1,22 @@
-import PlayingAreas from '../PlayingAreas';
+import { useContext } from 'react';
+
+import { GameContext } from '../../contexts/GameContextProvider';
+
+import { actions } from '../../constants/constants';
+
+import PlayingArea from '../PlayingArea';
 
 const GameDisplay = () => {
-	const ttt = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	const { gameStage, setGameStage } = useContext(GameContext);
+
+	const handleMove = (position) => {
+		setGameStage({ type: actions.PLAY, payload: position });
+	};
 
 	return (
 		<div className='game'>
-			{ttt.map((t) => (
-				<PlayingAreas />
+			{gameStage.moves.map((move) => (
+				<PlayingArea key={move.pos} handleMove={handleMove} move={move} />
 			))}
 		</div>
 	);

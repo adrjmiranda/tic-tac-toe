@@ -12,19 +12,19 @@ const reducer = (state, action) => {
 		case actions.START:
 			return {
 				...state,
-				stage: stages.BEGINNING,
+				stage: stages.GAME,
 				moves: initialMoves,
 			};
 		case actions.PLAY:
 			return {
 				...state,
-				moves: moves.map((move) => {
+				moves: state.moves.map((move) => {
 					if (action.payload === move.pos && !move.symbol) {
 						state.currentSymbol =
-							currentSymbol === symbols.X ? symbols.O : symbols.X;
+							state.currentSymbol === symbols.X ? symbols.O : symbols.X;
 						return {
 							...move,
-							symbol: currentSymbol,
+							symbol: state.currentSymbol,
 						};
 					} else {
 						return move;
