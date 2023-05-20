@@ -5,7 +5,8 @@
 	--back-secundary-color: #240047;
 	--back-primary-color: #1c0021;
 	--text-color: #eee;
-	--button-border-radius: 5px;
+	--min-border-radius: 5px;
+	--max-border-radius: 7px;
 }
 
 * {

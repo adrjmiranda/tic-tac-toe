@@ -1,7 +1,12 @@
+import Button from '../Button';
+
 const StartDisplay = () => {
 	return (
-		<div>
-			<h1>StartDisplay</h1>
+		<div className='start'>
+			<h1>
+				<span>Tic</span>-<span>Tac</span>-<span>Toe</span>
+			</h1>
+			<Button buttonText={'Start'} />
 		</div>
 	);
 };
