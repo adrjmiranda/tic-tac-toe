@@ -7,9 +7,9 @@ import './App.css';
 function App() {
 	return (
 		<div className='container'>
-			<StartDisplay />
+			{/* <StartDisplay /> */}
 			{/* <GameDisplay /> */}
-			{/* <FinishDisplay /> */}
+			<FinishDisplay />
 		</div>
 	);
 }

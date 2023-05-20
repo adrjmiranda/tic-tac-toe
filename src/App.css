@@ -64,3 +64,57 @@
 .start h1 span:nth-of-type(3) {
 	color: var(--back-primary-color);
 }
+
+/* game display */
+
+.game {
+	width: 320px;
+	height: 320px;
+	display: grid;
+	grid-template-columns: repeat(3, 33.33%);
+	grid-template-rows: repeat(3, 33.33%);
+}
+
+.game .playing_area {
+	border: 3px solid var(--secundary-color);
+	cursor: pointer;
+}
+
+.game .playing_area:nth-child(1),
+.game .playing_area:nth-child(2),
+.game .playing_area:nth-child(3) {
+	border-top: none;
+}
+
+.game .playing_area:nth-child(3),
+.game .playing_area:nth-child(6),
+.game .playing_area:nth-child(9) {
+	border-right: none;
+}
+
+.game .playing_area:nth-child(7),
+.game .playing_area:nth-child(8),
+.game .playing_area:nth-child(9) {
+	border-bottom: none;
+}
+
+.game .playing_area:nth-child(1),
+.game .playing_area:nth-child(4),
+.game .playing_area:nth-child(7) {
+	border-left: none;
+}
+
+/* finish display */
+
+.finish {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	padding: 20px;
+}
+
+.finish h1 {
+	color: var(--secundary-color);
+	text-shadow: 1px 1px 2px var(--primary-color);
+	font-size: 2.5rem;
+}

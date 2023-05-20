@@ -1,8 +1,6 @@
 const PlayingAreas = () => {
 	return (
-		<div>
-			<h1>PlayingAreas</h1>
-		</div>
+		<div className="playing_area"></div>
 	);
 };
 
