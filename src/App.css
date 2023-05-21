@@ -129,6 +129,7 @@
 
 .playing_area svg {
 	font-size: 4.5rem;
+	fill: var(--secundary-color);
 }
 
 .playing_area svg path {

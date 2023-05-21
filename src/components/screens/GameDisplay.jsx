@@ -11,6 +11,7 @@ const GameDisplay = () => {
 
 	const handleMove = (position) => {
 		setGameStage({ type: actions.PLAY, payload: position });
+		setGameStage({ type: actions.TEST });
 	};
 
 	return (

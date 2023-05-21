@@ -13,10 +13,11 @@ const actions = {
 	START: 'START',
 	PLAY: 'PLAY',
 	RESTART: 'RESTART',
+	TEST: 'TEST',
 };
 
 const initialMoves = [
-	{ pos: 1, symbol: 'X' },
+	{ pos: 1, symbol: undefined },
 	{ pos: 2, symbol: undefined },
 	{ pos: 3, symbol: undefined },
 	{ pos: 4, symbol: undefined },
@@ -27,4 +28,15 @@ const initialMoves = [
 	{ pos: 9, symbol: undefined },
 ];
 
-export { stages, symbols, initialMoves, actions };
+const victoryConditions = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9],
+	[1, 4, 7],
+	[2, 5, 8],
+	[3, 6, 9],
+	[1, 5, 9],
+	[3, 5, 7],
+];
+
+export { stages, symbols, initialMoves, actions, victoryConditions };
