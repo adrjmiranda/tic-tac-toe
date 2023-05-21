@@ -10,7 +10,7 @@ A simple tic-tac-toe app to exemplify using context api and useReducer in React.
 ## Prerequisites
 
 1. Install Node.js
-2. Clone your newly created repo: *https://github.com/adrjmiranda/tick-tac-toe/*
+2. Clone your newly created repo: *[https://github.com/adrjmiranda/tick-tac-toe/](https://github.com/adrjmiranda/tic-tac-toe.git)*
 3. Go to folder tick-tac-toe
 4. Use npm install to install all dependencies
 5. You can run tests in browser with **npm run dev**
