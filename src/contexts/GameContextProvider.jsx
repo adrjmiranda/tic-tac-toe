@@ -55,7 +55,7 @@ const reducer = (state, action) => {
 			} else if (checkDraw(state.moves)) {
 				return {
 					...state,
-					stages: stages.FINISH,
+					stage: stages.FINISH,
 				};
 			}
 
