@@ -12,8 +12,13 @@ const symbols = {
 const actions = {
 	START: 'START',
 	PLAY: 'PLAY',
-	RESTART: 'RESTART',
 	TEST: 'TEST',
+};
+
+const results = {
+	EMPTY: 'EMPTY',
+	WIN: 'WIN',
+	DRAW: 'DRAW',
 };
 
 const initialMoves = [
@@ -39,4 +44,4 @@ const victoryConditions = [
 	[3, 5, 7],
 ];
 
-export { stages, symbols, initialMoves, actions, victoryConditions };
+export { stages, symbols, initialMoves, actions, victoryConditions, results };

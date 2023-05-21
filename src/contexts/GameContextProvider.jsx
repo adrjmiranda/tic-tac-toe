@@ -6,6 +6,7 @@ import {
 	symbols,
 	actions,
 	victoryConditions,
+	results,
 } from '../constants/constants';
 
 export const GameContext = createContext({
@@ -41,27 +42,36 @@ const reducer = (state, action) => {
 			return {
 				...state,
 				stage: stages.GAME,
+				currentSymbol: symbols.X,
 				moves: initialMoves,
+				result: results.EMPTY,
 			};
 
 		case actions.TEST:
-			console.log(checkWin(state.moves));
-
 			if (checkWin(state.moves)) {
+				state.currentSymbol =
+					state.currentSymbol === symbols.X ? symbols.O : symbols.X;
+
 				return {
 					...state,
 					stage: stages.FINISH,
+					result: results.WIN,
 				};
 			} else if (checkDraw(state.moves)) {
 				return {
 					...state,
 					stage: stages.FINISH,
+					result: results.DRAW,
 				};
 			}
 
 			return state;
 
 		case actions.PLAY:
+			if (checkDraw(state.moves) || checkWin(state.moves)) {
+				return;
+			}
+
 			return {
 				...state,
 				moves: state.moves.map((move) => {
@@ -79,7 +89,6 @@ const reducer = (state, action) => {
 				}),
 			};
 
-		case actions.RESTART:
 		default:
 			return state;
 	}
@@ -90,6 +99,7 @@ const GameContextProvider = ({ children }) => {
 		stage: stages.BEGINNING,
 		currentSymbol: symbols.X,
 		moves: initialMoves,
+		result: results.EMPTY,
 	});
 
 	return (

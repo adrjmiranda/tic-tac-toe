@@ -135,3 +135,20 @@
 .playing_area svg path {
 	stroke: var(--primary-color);
 }
+
+/* finish */
+
+.finish h1 {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.finish h1 span svg {
+	fill: var(--primary-color);
+	font-size: 3.5rem;
+}
+
+.finish h1 span svg path {
+	stroke: var(--primary-color);
+}
